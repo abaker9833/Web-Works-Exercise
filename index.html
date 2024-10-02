@@ -1,0 +1,60 @@
+<!--
+Part One: Solidify Terminology
+1. HTTP - Hypertext Transfer Protocol, tells servers/browsers how to react to commands
+2. URL - Uniform Resource Locator, address used to access information on the web
+3. DNS - Domain Name System, translates domain names readable by humans
+4. Query String - part of a URL that has data that needs to be sent to a server
+5. Common HTTP verbs: GET - used to request data from a server, parameters in the URL; POST - used to send data to a server, data included in request body rather than the URL
+6. HTTP request - message sent by a client to a server asking for a resource
+7. HTTP response - message sent from a server back to a client in reply to an HTTP request
+8. HTTP headers - provide additional context about initial request EX. Request: User-agent, Accept;  Response: Content-type, Cache-control
+9. browser checks the DNS to find the IP address -> browser makes connection with the server using the IP address -> sends an HTTP request to the server for the specified page -> server processes request, retrieves the requested resource, and then will prepare an HTTP response -> server sends response back to browser
+
+Part Two
+1. curl "https://icanhazdadjoke.com/search?term=pirate"
+2. dig icanhazdadjoke.com
+3. 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Page</title>
+</head>
+<body>
+    <h1>Hello everyone!</h1>
+    <p>Wow, what an amazing web page using python.</p>
+</body>
+</html>
+
+(use code in terminal: python3 -m http.server)
+
+Part Three -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form w/ GET Method</title>
+</head>
+<body>
+    <!--Original Line: <form action="" method="GET">-->
+    <form action="" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
+
+<!--
+Part Four
+Javascript used to explore URL API
+
+const url = new URL('http://example.com/?name=Denise&age=60');
+
+console.log(url.searchParams.get('name')); // "John"
+console.log(url.searchParams.get('age'));
+-->
